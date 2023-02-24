@@ -1,0 +1,14 @@
+version: '3'
+services:
+  front-end:
+    image: node:16-alpine
+    container_name: rest_front_end
+    working_dir: /auto-rest
+    volumes:
+      - ./front-end:/auto-rest
+    stdin_open: true
+    tty: true
+    command: sh
+    ports:
+      - 3000:3000
+    restart: on-failure
