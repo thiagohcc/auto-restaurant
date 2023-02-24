@@ -7,7 +7,7 @@ export default function BtnLogin({setLogin, btnDisabled}) {
       onClick={ setLogin }
       disabled={ btnDisabled }
     >
-      Login
+      LOGIN
     </button>
   )
 };

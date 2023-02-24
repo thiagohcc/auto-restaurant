@@ -4,6 +4,7 @@ import PasswordInputLogin from '../../components/PasswordInputLogin';
 import BtnLogin from '../../components/BtnLogin';
 import { isValidUser, isValidPassword } from '../../helpers/validator';
 import GeneralContext from '../../context/generalContext';
+import { Link } from 'react-router-dom';
 
 export default function LoginTable() {
   const { setUser } = useContext(GeneralContext);
@@ -15,7 +16,7 @@ export default function LoginTable() {
     setUser({
       userLogin,
       passwordLogin,
-      category: 'table',
+      userCategory: 'table',
     });
   }
 
@@ -40,10 +41,12 @@ export default function LoginTable() {
         passwordLogin={ passwordLogin }
         setPasswordLogin={ setPasswordLogin }
       />
-      <BtnLogin
-        setLogin={ setLogin }
-        btnDisabled={ btnDisabled }
-      />
+      <Link to="/table-menu">
+        <BtnLogin
+          setLogin={ setLogin }
+          btnDisabled={ btnDisabled }
+        />
+      </Link>
     </div>
   )
 };

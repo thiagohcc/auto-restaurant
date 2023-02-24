@@ -1,5 +1,5 @@
 export const isValidUser = (user) => {
-  if (user === 'Table.01') {
+  if (user === 'Mesa-01') {
     return true;
   }
   return false;
