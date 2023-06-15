@@ -7,13 +7,13 @@ export default function TableMenuCategories() {
 
   return (
     <div>
-      <h3>{ comidas.name }</h3>
-      { comidas.subCategories.map(subCategory => (
-        <p>{ subCategory.name }</p>
+      <h3>{ comidas.type }</h3>
+      { comidas.categories.map(category => (
+        <p>{ category.name }</p>
       )) }
-      <h3>{ bebidas.name }</h3>
-      { bebidas.subCategories.map(subCategory => (
-        <p>{ subCategory.name }</p>
+      <h3>{ bebidas.type }</h3>
+      { bebidas.categories.map(category => (
+        <p>{ category.name }</p>
       )) }
     </div>
   )
