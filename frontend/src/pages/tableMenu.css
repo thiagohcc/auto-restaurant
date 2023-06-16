@@ -1,0 +1,16 @@
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.all_menu{
+  display: flex;
+  flex-direction: row;
+}
+
+.all_products{
+  display: felx;
+  overflow: auto;
+  height: 75vh;
+}

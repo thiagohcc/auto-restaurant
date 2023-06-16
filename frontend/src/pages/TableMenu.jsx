@@ -4,23 +4,29 @@ import TableMenuCategories from '../components/TableMenuCategories';
 import ProductCard from '../components/ProductCard';
 import { allProducts } from '../helpers/AllProducts';
 
+import './tableMenu.css'
+
 export default function TableMenu() {
   return (
-    <div>
+    <div id='container'>
       <TableHeader />
-      <TableMenuCategories />
-      {
-        allProducts
-          // .filter(product => (
-          //   product.type === 'Comidas'
-          // ))
-          .map(product => (
-            <ProductCard
-              product={ product }
-            />
-            )
-          )
-      }
+      <div className='all_menu'>
+        <TableMenuCategories />
+        <div className='all_products'>
+          {
+            allProducts
+              // .filter(product => (
+              //   product.type === 'Comidas'
+              // ))
+              .map(product => (
+                <ProductCard
+                  product={ product }
+                />
+                )
+              )
+          }
+        </div>
+      </div>
     </div>
   )
 };
